@@ -5,7 +5,7 @@ import java.util.Collection;
 
 
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 
 @Entity

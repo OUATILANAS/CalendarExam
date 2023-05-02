@@ -3,7 +3,7 @@ package com.example.demo.entities;
 
 
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class Surveillant extends Personne{

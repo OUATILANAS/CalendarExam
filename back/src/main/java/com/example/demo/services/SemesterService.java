@@ -3,13 +3,11 @@ package com.example.demo.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.example.demo.dao.IDao;
 import com.example.demo.entities.Semester;
 import com.example.demo.repositories.SemesterRepository;
 
-@Service
 public class SemesterService implements IDao<Semester>{
 	@Autowired
     private SemesterRepository semesterRepository;
