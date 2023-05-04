@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entities.Semester;
+import com.example.demo.models.Semester;
 import com.example.demo.services.SemesterService;
 
 @RestController
@@ -40,13 +40,13 @@ public class SemestreController {
 	}
 
 	@PutMapping("/update")
-	public Semester update(@RequestBody Semester p) {
-		return semesterService.update(p);
+	public void update(@RequestBody Semester p) {
+		 semesterService.update(p);
 	}
 
-	@DeleteMapping("/delete/{id}")
-	public void delete(@PathVariable int id) {
-		semesterService.delete(id);
+	@DeleteMapping("/delete")
+	public void delete(@RequestBody Semester p) {
+		semesterService.delete(p);
 	}
 	
 	

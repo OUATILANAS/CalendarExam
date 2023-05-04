@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entities.Etudiant;
-import com.example.demo.entities.Filiere;
+import com.example.demo.models.Etudiant;
+import com.example.demo.models.Filiere;
 import com.example.demo.services.EtudiantService;
 
 @RestController

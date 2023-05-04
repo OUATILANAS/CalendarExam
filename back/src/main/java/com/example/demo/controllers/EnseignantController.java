@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entities.Enseignant;
+import com.example.demo.models.Enseignant;
 import com.example.demo.services.EnseignantService;
 
 @RestController

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entities.Filiere;
+import com.example.demo.models.Filiere;
 import com.example.demo.services.FiliereService;
 
 @RestController
@@ -39,13 +39,13 @@ public class FiliereController {
 	}
 
 	@PutMapping("/update")
-	public Filiere update(@RequestBody Filiere p) {
-		return filiereService.update(p);
+	public void update(@RequestBody Filiere p) {
+		 filiereService.update(p);
 	}
 
-	@DeleteMapping("/delete/{id}")
-	public void delete(@PathVariable int id) {
-		filiereService.delete(id);
+	@DeleteMapping("/delete")
+	public void delete(@RequestBody Filiere p) {
+		filiereService.delete(p);
 	}
 	
 	

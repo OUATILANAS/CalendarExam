@@ -3,13 +3,14 @@ package com.example.demo.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.IDao;
-import com.example.demo.entities.Filiere;
-import com.example.demo.repositories.FiliereRepository;
+import com.example.demo.dao.IDAO;
+import com.example.demo.models.Filiere;
+import com.example.demo.repository.FiliereRepository;
 
-
-public class FiliereService implements IDao<Filiere>{
+@Service
+public class FiliereService implements IDAO<Filiere>{
 	@Autowired
     private FiliereRepository filiereRepository;
 
@@ -29,13 +30,13 @@ public class FiliereService implements IDao<Filiere>{
 	}
 
 	@Override
-	public Filiere update(Filiere p) {
-		return filiereRepository.save(p);
+	public void update(Filiere p) {
+		 filiereRepository.save(p);
 	}
 
 	@Override
-	public void delete(int id) {
-		filiereRepository.deleteById(id);
+	public void delete(Filiere p) {
+		filiereRepository.delete(p);
 		
 	}
 

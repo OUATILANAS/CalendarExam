@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.demo.entities.Calendar;
-import com.example.demo.entities.Exam;
-import com.example.demo.repositories.ExamRepository;
+import com.example.demo.models.Calendar;
+import com.example.demo.models.Exam;
+import com.example.demo.repository.ExamRepository;
 
 @Service
 public class ExamService {

@@ -3,12 +3,13 @@ package com.example.demo.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.IDao;
-import com.example.demo.entities.Semester;
-import com.example.demo.repositories.SemesterRepository;
-
-public class SemesterService implements IDao<Semester>{
+import com.example.demo.dao.IDAO;
+import com.example.demo.models.Semester;
+import com.example.demo.repository.SemesterRepository;
+@Service
+public class SemesterService implements IDAO<Semester>{
 	@Autowired
     private SemesterRepository semesterRepository;
 
@@ -28,13 +29,13 @@ public class SemesterService implements IDao<Semester>{
 	}
 
 	@Override
-	public Semester update(Semester p) {
-		return semesterRepository.save(p);
+	public void update(Semester p) {
+		 semesterRepository.save(p);
 	}
 
 	@Override
-	public void delete(int id) {
-		semesterRepository.deleteById(id);
+	public void delete(Semester p) {
+		semesterRepository.delete(p);
 		
 	}
 }

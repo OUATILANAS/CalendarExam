@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.IDao;
-import com.example.demo.entities.ModuleEntity;
-import com.example.demo.repositories.ModuleRepository;
+import com.example.demo.dao.IDAO;
+import com.example.demo.models.ModuleEntity;
+import com.example.demo.repository.ModuleRepository;
 @Service
-public class ModuleService implements IDao<ModuleEntity>{
+public class ModuleService implements IDAO<ModuleEntity>{
 	@Autowired
     private ModuleRepository moduleRepository;
 
@@ -29,13 +29,13 @@ public class ModuleService implements IDao<ModuleEntity>{
 	}
 
 	@Override
-	public ModuleEntity update(ModuleEntity p) {
-		return moduleRepository.save(p);
+	public void update(ModuleEntity p) {
+		 moduleRepository.save(p);
 	}
 
 	@Override
-	public void delete(int id) {
-		moduleRepository.deleteById(id);
+	public void delete(ModuleEntity p) {
+		moduleRepository.delete(p);
 		
 	}
 

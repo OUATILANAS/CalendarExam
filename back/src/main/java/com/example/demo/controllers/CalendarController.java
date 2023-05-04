@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entities.Calendar;
+import com.example.demo.models.Calendar;
 import com.example.demo.services.CalendarService;
 
 @RestController
@@ -39,13 +39,13 @@ public class CalendarController {
 	}
 
 	@PutMapping("/update")
-	public Calendar update(@RequestBody Calendar p) {
-		return calendarService.update(p);
+	public void update(@RequestBody Calendar p) {
+		 calendarService.update(p);
 	}
 
-	@DeleteMapping("/delete/{id}")
-	public void delete(@PathVariable int id) {
-		calendarService.delete(id);
+	@DeleteMapping("/delete")
+	public void delete(@RequestBody Calendar p) {
+		calendarService.delete(p);
 	}
 	
 	

@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
-import com.example.demo.entities.Etudiant;
-import com.example.demo.entities.Filiere;
-import com.example.demo.repositories.EtudiantRepository;
+import com.example.demo.models.Etudiant;
+import com.example.demo.models.Filiere;
+import com.example.demo.repository.EtudiantRepository;
 
 
 @Service

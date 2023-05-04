@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entities.Salle;
-import com.example.demo.entities.TypeSalle;
+import com.example.demo.models.Salle;
+import com.example.demo.models.TypeSalle;
 import com.example.demo.services.SalleService;
 
 @RestController
@@ -40,13 +40,13 @@ public class SalleController {
 	}
 
 	@PutMapping("/update")
-	public Salle update(@RequestBody Salle p) {
-		return salleService.update(p);
+	public void update(@RequestBody Salle p) {
+		 salleService.update(p);
 	}
 
-	@DeleteMapping("/delete/{id}")
-	public void delete(@PathVariable int id) {
-		salleService.delete(id);
+	@DeleteMapping("/delete")
+	public void delete(@RequestBody Salle p) {
+		salleService.delete(p);
 	}
 
 	@GetMapping("/type")

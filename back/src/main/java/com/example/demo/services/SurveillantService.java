@@ -3,11 +3,11 @@ package com.example.demo.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
-import com.example.demo.entities.Surveillant;
-import com.example.demo.repositories.SurveillantRepository;
-
+import com.example.demo.models.Surveillant;
+import com.example.demo.repository.SurveillantRepository;
+@Service
 public class SurveillantService {
 	@Autowired
     private SurveillantRepository surveillantRepository;

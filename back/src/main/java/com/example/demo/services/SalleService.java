@@ -3,14 +3,15 @@ package com.example.demo.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.IDao;
-import com.example.demo.entities.Salle;
-import com.example.demo.entities.TypeSalle;
-import com.example.demo.repositories.SalleRepository;
+import com.example.demo.dao.IDAO;
+import com.example.demo.models.Salle;
+import com.example.demo.models.TypeSalle;
+import com.example.demo.repository.SalleRepository;
 
-
-public class SalleService implements IDao<Salle>{
+@Service
+public class SalleService implements IDAO<Salle>{
 	@Autowired
     private SalleRepository salleRepository;
 	
@@ -32,13 +33,13 @@ public class SalleService implements IDao<Salle>{
 
 	
 	@Override
-	public Salle update(Salle p) {
-		return salleRepository.save(p);
+	public void update(Salle p) {
+		 salleRepository.save(p);
 	}
 
 	@Override
-	public void delete(int id) {
-		salleRepository.deleteById(id);
+	public void delete(Salle p) {
+		salleRepository.delete(p);
 		
 	}
 

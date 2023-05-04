@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.demo.dao.IDao;
-import com.example.demo.entities.Calendar;
-import com.example.demo.repositories.CalendarRepository;
+import com.example.demo.dao.IDAO;
+import com.example.demo.models.Calendar;
+import com.example.demo.repository.CalendarRepository;
 @Service
-public class CalendarService implements IDao<Calendar>{
+public class CalendarService implements IDAO<Calendar>{
 	@Autowired
     private CalendarRepository calendarRepository;
 
@@ -28,13 +28,13 @@ public class CalendarService implements IDao<Calendar>{
 	}
 
 	@Override
-	public Calendar update(Calendar p) {
-		return calendarRepository.save(p);
+	public void update(Calendar p) {
+		 calendarRepository.save(p);
 	}
 
 	@Override
-	public void delete(int id) {
-		calendarRepository.deleteById(id);
+	public void delete(Calendar p) {
+		calendarRepository.delete(p);
 		
 	}
 

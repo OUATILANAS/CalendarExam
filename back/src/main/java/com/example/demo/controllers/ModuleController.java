@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entities.ModuleEntity;
+import com.example.demo.models.ModuleEntity;
 import com.example.demo.services.ModuleService;
 
 @RestController
@@ -39,13 +39,13 @@ public class ModuleController {
 	}
 
 	@PutMapping("/update")
-	public ModuleEntity update(@RequestBody ModuleEntity p) {
-		return moduleService.update(p);
+	public void update(@RequestBody ModuleEntity p) {
+		 moduleService.update(p);
 	}
 	
-	@DeleteMapping("/delete/{id}")
-	public void delete(@PathVariable int id) {
-		moduleService.delete(id);
+	@DeleteMapping("/delete")
+	public void delete(@RequestBody ModuleEntity p) {
+		moduleService.delete(p);
 	}
 	
 	
