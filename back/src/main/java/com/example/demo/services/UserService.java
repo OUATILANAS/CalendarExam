@@ -26,11 +26,6 @@ public class UserService implements IDAO<User>{
 		return null;
 	}
 
-	@Override
-	public User findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void update(User o) {
@@ -44,9 +39,13 @@ public class UserService implements IDAO<User>{
 		
 	}
 
-	
-	
-	
+	@Override
+	public User findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	 
+		
 	
 
 }

@@ -23,6 +23,7 @@ public class User {
   @Size(max = 20)
   private String username;
 
+
   @NotBlank
   @Size(max = 50)
   @Email
@@ -37,6 +38,21 @@ public class User {
         joinColumns = @JoinColumn(name = "user_id"), 
         inverseJoinColumns = @JoinColumn(name = "role_id"))
   private Set<Role> roles = new HashSet<>();
+  
+  
+  @Size(max = 20)
+  private String Matricule;
+  
+  
+  @Size(max = 20)
+  private String Nom;
+  
+  
+  @Size(max = 20)
+  private String Prenom;
+  
+  @Size(max = 20)
+  private String Telephone;
 
   public User() {
   }
@@ -86,4 +102,38 @@ public class User {
   public void setRoles(Set<Role> roles) {
     this.roles = roles;
   }
+
+public String getMatricule() {
+	return Matricule;
+}
+
+public void setMatricule(String matricule) {
+	Matricule = matricule;
+}
+
+public String getNom() {
+	return Nom;
+}
+
+public void setNom(String nom) {
+	Nom = nom;
+}
+
+public String getPrenom() {
+	return Prenom;
+}
+
+public void setPrenom(String prenom) {
+	Prenom = prenom;
+}
+
+public String getTelephone() {
+	return Telephone;
+}
+
+public void setTelephone(String telephone) {
+	Telephone = telephone;
+}
+  
+  
 }
