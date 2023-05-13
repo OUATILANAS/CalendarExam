@@ -13,7 +13,7 @@ public class Calendar {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-	
+	private String exam_name;
 	private Date start_time;
 	private Date end_time;
 	public Long getId() {
@@ -34,6 +34,13 @@ public class Calendar {
 	public void setEnd_time(Date end_time) {
 		this.end_time = end_time;
 	}
+	public String getExam_name() {
+		return exam_name;
+	}
+	public void setExam_name(String exam_name) {
+		this.exam_name = exam_name;
+	}
+	
 	
 	
 }

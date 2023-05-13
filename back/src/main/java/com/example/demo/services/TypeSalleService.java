@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.IDAO;
+import com.example.demo.dao.IDao;
 import com.example.demo.models.TypeSalle;
 import com.example.demo.repository.TypeSalleRepository;
 @Service
-public class TypeSalleService implements IDAO<TypeSalle>{
+public class TypeSalleService implements IDao<TypeSalle>{
 	@Autowired
     private TypeSalleRepository typeSalleRepository;
 

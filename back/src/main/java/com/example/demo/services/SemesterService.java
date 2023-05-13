@@ -5,11 +5,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.dao.IDAO;
+import com.example.demo.dao.IDao;
 import com.example.demo.models.Semester;
 import com.example.demo.repository.SemesterRepository;
 @Service
-public class SemesterService implements IDAO<Semester>{
+public class SemesterService implements IDao<Semester>{
 	@Autowired
     private SemesterRepository semesterRepository;
 

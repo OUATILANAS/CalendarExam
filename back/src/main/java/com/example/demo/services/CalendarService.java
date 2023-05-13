@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.demo.dao.IDAO;
+import com.example.demo.dao.IDao;
 import com.example.demo.models.Calendar;
 import com.example.demo.repository.CalendarRepository;
 @Service
-public class CalendarService implements IDAO<Calendar>{
+public class CalendarService implements IDao<Calendar>{
 	@Autowired
     private CalendarRepository calendarRepository;
 
