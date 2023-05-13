@@ -1,9 +1,10 @@
 import React from 'react';
-import '../../css/bootstrap.min.css'
-import '../../css/profile_details.css'
+import '../../css/bootstrap.min.css';
+import '../../css/profile_details.css';
 import Modal from '@mui/material/Modal';
 import PasswordChanger from './PasswordChange';
 import { TextField } from '@mui/material';
+import BasicModal from '../ProfileComponents/modal';
 
 
 
@@ -15,7 +16,7 @@ export default function ProfileUser() {
 
   return (
           
-      <div class="container" style={{marginTop:200}}>
+      <div class="container" style={{marginTop:20,marginBottom:30}}>
         <Modal
                 open={open}
                 onClose={handleClose}
@@ -117,12 +118,15 @@ export default function ProfileUser() {
                     <div class="text-right">
                       <button type="button" id="submit" onClick={handleOpen} name="submit" class="btn btn-primary">Changer Password</button>
                     </div>
+                   
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <BasicModal/>
         </div>
+        
       </div>
   );
 }

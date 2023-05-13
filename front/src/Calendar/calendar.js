@@ -5,8 +5,8 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import frLocale from '@fullcalendar/core/locales/fr';
 
-function calendar() {
-  
+function homePage() {
+
   return (
     <div>
       <Fullcalendar
@@ -23,4 +23,4 @@ function calendar() {
   );
 }
 
-export default calendar;
+export default homePage;

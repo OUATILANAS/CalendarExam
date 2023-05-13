@@ -7,18 +7,16 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
-import AddLocationIcon from '@mui/icons-material/AddLocation';
 import { Link } from 'react-router-dom';
 
 
 
 
-const pages = ['Calendar', 'Staff', 'Users'];
+const pages = ['Calendar', 'Staff'];
 const settings = ['Profile', 'Account', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -45,11 +43,11 @@ function ResponsiveAppBar() {
          <Container maxWidth="xl">
             <Toolbar disableGutters>
 
-              
+
                <Typography
                   variant="h6"
                   noWrap
-                  
+
                   sx={{
                      mr: 2,
                      display: { xs: 'none', md: 'flex' },
@@ -60,7 +58,7 @@ function ResponsiveAppBar() {
                      textDecoration: 'none',
                   }}
                >
-                 PFA
+                  PFA
                </Typography>
 
                <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -99,12 +97,12 @@ function ResponsiveAppBar() {
                      ))}
                   </Menu>
                </Box>
-              
+
                <Typography
                   variant="h5"
                   noWrap
-                 
-                 
+
+
                   sx={{
                      mr: 2,
                      display: { xs: 'flex', md: 'none' },
@@ -125,7 +123,7 @@ function ResponsiveAppBar() {
                         onClick={handleCloseNavMenu}
                         sx={{ my: 2, color: 'white', display: 'block' }}
                      >
-                        <Link to={`/${page}`}   style={{ textDecoration: "none", color: "white" }} >
+                        <Link to={`/${page}`} style={{ textDecoration: "none", color: "white" }} >
 
                            {page}
                         </Link>
@@ -158,7 +156,8 @@ function ResponsiveAppBar() {
                   >
                      {settings.map((setting) => (
                         <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                           <Typography textAlign="center">{setting}</Typography>
+                           <Typography textAlign="center">
+                              <Link to={`/${setting}`} >{setting}</Link></Typography>
                         </MenuItem>
                      ))}
                   </Menu>

@@ -23,7 +23,7 @@ export default function Contact() {
 
     const handleTypeChange = (event) => {
         setType(event.target.value);
-        console.log("uyrduyrdyrd",event.target.value)
+        console.log("uyrduyrdyrd", event.target.value)
         if (event.target.value !== 'Autres') {
             setObject(event.target.value);
         }
@@ -61,7 +61,7 @@ export default function Contact() {
         setMessage(event.target.value);
     };
     const handleObjectChange = (event) => {
-       
+
         setObject(event.target.value);
     };
 
@@ -72,7 +72,7 @@ export default function Contact() {
                 <CssBaseline />
                 <Box
                     sx={{
-                        marginTop: 1 ,
+                        marginTop: 1,
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
@@ -179,10 +179,11 @@ export default function Contact() {
                             type="submit"
                             fullWidth
                             variant="contained"
-                            sx={{ mt: 3, mb: 2 }}
+                            sx={{ mt: 1, mb: 1 }}
                         >
                             Envoyer Récclamation
                         </Button>
+                       
 
                     </Box>
                 </Box>

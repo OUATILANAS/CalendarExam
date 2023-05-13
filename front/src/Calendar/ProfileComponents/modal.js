@@ -11,7 +11,7 @@ export default function BasicModal() {
 
   return (
     <div>
-      <Button sx={{color:'black', borderWidth:'1px', borderColor:'black', borderRadius: '15px', borderStyle: 'solid',margin:'15px'}} onClick={handleOpen}>Envoyer une recclamation</Button>
+      <Button sx={{ color: 'black', borderWidth: '1px', borderColor: 'black', borderRadius: '15px', borderStyle: 'solid', margin: '15px' }} onClick={handleOpen}>Envoyer une recclamation</Button>
 
       <Modal
         open={open}
@@ -19,7 +19,7 @@ export default function BasicModal() {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Contact/>
+        <Contact />
       </Modal>
     </div>
   );

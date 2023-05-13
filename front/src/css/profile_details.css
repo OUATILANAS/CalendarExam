@@ -1,13 +1,13 @@
 
-body{
-      margin-top:20px;
-      color: #bcd0f7;
-      background: #1A233A;
+body {
+    color: #bcd0f7;
+   
   }
   .account-settings .user-profile {
       margin: 0 0 1rem 0;
       padding-bottom: 1rem;
       text-align: center;
+      
   }
   .account-settings .user-profile .user-avatar {
       margin: 0 0 1rem 0;
@@ -39,6 +39,7 @@ body{
       border-radius: 5px;
       border: 0;
       margin-bottom: 1rem;
+      
   }
   .form-control {
       border: 1px solid #596280;
@@ -48,6 +49,7 @@ body{
       font-size: .825rem;
       background: #1A233A;
       color: #bcd0f7;
+      
   }
   .form-group{
     text-align: left;
