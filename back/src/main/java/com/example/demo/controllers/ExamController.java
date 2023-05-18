@@ -3,6 +3,7 @@ package com.example.demo.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,14 +13,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.models.Calendar;
+import com.example.demo.models.CreateExamRequest;
 import com.example.demo.models.Exam;
 import com.example.demo.services.ExamService;
 
 @RestController
 @RequestMapping("api/exams")
 public class ExamController {
-	
+
 	@Autowired
 	ExamService examService;
 
@@ -48,10 +49,11 @@ public class ExamController {
 		examService.delete(id);
 	}
 
-	@GetMapping("/calendar")
-	public List<Exam> findExamsByCalendar(@RequestBody Calendar calendar) {
-		return examService.findExamsByCalendar(calendar);
+	@PostMapping("/create")
+	public ResponseEntity<Exam> createExam(@RequestBody CreateExamRequest request) {
+		Exam exam = examService.createExam(request.getNom(),request.getDuree(),request.getDateTime(),request.getFiliereId(),request.getSalleId());
+
+		return ResponseEntity.ok(exam);
 	}
 
-	
 }

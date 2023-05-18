@@ -15,6 +15,6 @@ import com.example.demo.models.Filiere;
  *
  */
 public interface FiliereRepository extends JpaRepository<Filiere, Integer>{
-	Filiere findById(int id);
+	Filiere findById(int filiereId);
 	
 }

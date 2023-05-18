@@ -24,10 +24,7 @@ public class FiliereService implements IDao<Filiere>{
 		 return filiereRepository.findAll();
 	}
 
-	@Override
-	public Filiere findById(int id) {
-		return filiereRepository.findById(id);
-	}
+	
 
 	@Override
 	public void update(Filiere p) {
@@ -38,6 +35,12 @@ public class FiliereService implements IDao<Filiere>{
 	public void delete(Filiere p) {
 		filiereRepository.delete(p);
 		
+	}
+
+	@Override
+	public Filiere findById(int id) {
+		
+		return filiereRepository.findById(id);
 	}
 
 	

@@ -9,7 +9,7 @@ import com.example.demo.models.TypeSalle;
 
 public interface SalleRepository extends JpaRepository<Salle, Integer>{
 	
-	Salle findById(int id);
+	Salle findById(int salleId);
 
 	List<Salle> findByNom(TypeSalle nom);
 }
